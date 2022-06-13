@@ -11,7 +11,7 @@ p_load(data.table, ggplot2, reshape2, dplyr)
 datos <- read.table("output (2075-2099).sub", skip = 9, header = FALSE) #copiar output.sub de scenarios
 datos = as.data.table(datos)
 
-#dividir 11 datos de subcuencas de la tabla :TablesOut (formato access) EN QSWAT
+#dividir 11 datos(# nro de subcuencas) de la tabla :TablesOut (formato access) EN QSWAT
 datos1 <- tail(datos,11)
 
 #dividir los datos de la columna de la tabla y crear una nueva tabla #TablesOut
@@ -49,7 +49,7 @@ ggplot(data = tab2, mapping = aes(x = Subcuencas, y = Q_mmaño, fill = Parámetr
 #windows()
 ggplot(data = tab2, mapping = aes(x = Subcuencas, y = Q_mmaño, fill = Parámetros)) +
   geom_bar(stat = "identity") + ggtitle("Comparación de diferentes parámetros a mivel de subcuencas")+
-  labs(title = "Observed genera through time",
+  labs(title = "",
        x = "Subcuencas",
        y = "mm/año")
 #fig2
