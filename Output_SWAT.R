@@ -1,3 +1,4 @@
+######## 
 
 setwd("D:/Qswat_cachi/Jonatan_tesis/Scenarios/Simulación_R")
 rm(list=ls())
@@ -34,7 +35,7 @@ tab <- select(datos3, -V2)
 tab1 <- melt(tab, id.vars = "Subcuencas", variable.name = "Parámetros", value.name = "Q_mmaño")
 
 #Guardar
-#write.csv(sbpartab ,"D:/Qswat_cachi/Jonatan_tesis/Scenarios/Simulacion_Python/GWF_BWFpy.csv", quote = F)
+#write.csv(tab1,"D:/Qswat_cachi/Jonatan_tesis/Scenarios/Simulacion_Python/GWF_BWFpy.csv", quote = F)
 
 #redondear
 #library(dplyr)
